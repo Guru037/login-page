@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crime Rate Prediction</title>
+    <style>
+        /* Your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            background-image: url(crime-scene1.jpg)no repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: #007BFF;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: right;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #0056b3;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            width: 400px;
+            text-align: center;
+            margin: 20px auto;
+            margin-top: 120px;
+        }
+
+        h1 {
+            color: #007BFF;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#about">About</a>
+        <a href="#sign in">Sign in</a>
+      
+        
+        
+        <!-- Add more links as needed -->
+    </div>
+
+    <div class="container" id="prediction">
+        <h1>Crime Rate Prediction</h1>
+
+        <label for="year">Year:</label>
+        <select id="year">
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <!-- Add more years as needed -->
+        </select>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" placeholder="Enter location">
+
+        <label for="crimeType">Crime Type:</label>
+        <select id="crimeType">
+            <option value="murder">Murder</option>
+            <option value="childAbuse">Child Abuse</option>
+            <option value="kidnapping">Kidnapping</option>
+            <option value="robbery">Robbery</option>
+        </select>
+
+        <button onclick="predictCrimeRate()">Predict Crime Rate</button>
+
+        <div id="result"></div>
+    </div>
+
+    <!-- Add more sections as needed -->
+
+    <script>
+        function predictCrimeRate() {
+            const year = document.getElementById('year').value;
+            const location = document.getElementById('location').value;
+            const crimeType = document.getElementById('crimeType').value;
+
+            // You can use these inputs to fetch data and make predictions using a backend or API.
+
+            // Placeholder prediction
+            const prediction = "Your crime rate prediction goes here.";
+
+            document.getElementById('result').innerHTML = `Predicted Crime Rate: ${prediction}`;
+        }
+    </script>
+</body>
+</html>
